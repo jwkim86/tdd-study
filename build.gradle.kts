@@ -50,14 +50,26 @@ tasks.jacocoTestReport {
 }
 
 tasks.jacocoTestCoverageVerification {
-    dependsOn(tasks.test)
+    dependsOn(tasks.test, tasks.jacocoTestReport)
     violationRules {
         rule {
+
             limit {
                 minimum = 0.80.toBigDecimal() // 80% 이상이어야 통과
             }
         }
     }
+    classDirectories.setFrom(
+        files(
+            classDirectories.files.map {
+                fileTree(it) {
+                    exclude(
+                        "com/koreaap/itdev2/TddStudyApplication.class",
+                    )
+                }
+            },
+        ),
+    )
 }
 
 spotless {
