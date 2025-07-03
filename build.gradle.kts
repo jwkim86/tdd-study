@@ -2,6 +2,7 @@ plugins {
 	java
 	id("org.springframework.boot") version "3.5.3"
 	id("io.spring.dependency-management") version "1.1.7"
+    id("com.diffplug.spotless") version "6.25.0"
 }
 
 group = "com.koreaap"
@@ -30,4 +31,15 @@ dependencies {
 
 tasks.test {
 	useJUnitPlatform()
+}
+
+spotless {
+    java {
+        googleJavaFormat() // Google Java Style 적용
+        target("src/**/*.java")
+    }
+    kotlinGradle {
+        ktlint()
+        target("*.kts")
+    }
 }
