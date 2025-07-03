@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TddstudyApplication {
+public class TddStudyApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(TddstudyApplication.class, args);
+    SpringApplication.run(TddStudyApplication.class, args);
   }
 }
