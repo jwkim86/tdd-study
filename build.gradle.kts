@@ -72,6 +72,10 @@ tasks.jacocoTestCoverageVerification {
     )
 }
 
+tasks.build {
+    dependsOn(tasks.test)
+}
+
 spotless {
     java {
         googleJavaFormat() // Google Java Style 적용
