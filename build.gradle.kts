@@ -31,6 +31,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    dependsOn("spotlessCheck")
 }
 
 spotless {
