@@ -3,6 +3,7 @@ plugins {
     id("org.springframework.boot") version "3.5.3"
     id("io.spring.dependency-management") version "1.1.7"
     id("com.diffplug.spotless") version "6.25.0"
+    id("jacoco")
 }
 
 group = "com.koreaap"
@@ -31,7 +32,32 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    dependsOn("spotlessCheck")
+    dependsOn(tasks.spotlessCheck)
+    finalizedBy(tasks.jacocoTestReport)
+    finalizedBy(tasks.jacocoTestCoverageVerification)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+    doLast {
+        val reportPath = "${layout.buildDirectory.get().asFile.absolutePath.replace("\\", "/")}/reports/jacoco/test/html/index.html"
+        println("테스트 커버리지 리포트: file:///$reportPath")
+    }
+}
+
+tasks.jacocoTestCoverageVerification {
+    dependsOn(tasks.test)
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.80.toBigDecimal() // 80% 이상이어야 통과
+            }
+        }
+    }
 }
 
 spotless {
