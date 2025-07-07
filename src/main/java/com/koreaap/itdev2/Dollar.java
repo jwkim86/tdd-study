@@ -2,12 +2,9 @@ package com.koreaap.itdev2;
 
 public class Dollar {
 
-    Dollar(int amount) {
+  Dollar(int amount) {}
 
-    }
+  void times(int multiplier) {}
 
-    void times(int multiplier) {
-    }
-
-    int amount;
+  int amount;
 }
