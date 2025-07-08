@@ -37,4 +37,7 @@ class TddStudyApplicationTests {
   // TODO: hashCode()
   // TODO: Equals null
   // TODO: Equals object
+  // TODO: Dollar/Franc 중복
+  // TODO: 공용 equals
+  // TODO: 공용 times
 }
