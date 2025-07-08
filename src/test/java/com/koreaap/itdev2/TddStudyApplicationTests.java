@@ -31,7 +31,6 @@ class TddStudyApplicationTests {
     assertEquals(new Franc(15), five.times(3));
   }
 
-
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: Fix Money round-up error
   // TODO: hashCode()
