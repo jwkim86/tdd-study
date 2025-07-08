@@ -2,6 +2,8 @@ package com.koreaap.itdev2;
 
 public class Dollar {
 
+  private int amount;
+
   Dollar(int amount) {
     this.amount = amount;
   }
@@ -9,8 +11,6 @@ public class Dollar {
   Dollar times(int multiplier) {
     return new Dollar(amount * multiplier);
   }
-
-  int amount;
 
   @Override
   public boolean equals(Object object) {
