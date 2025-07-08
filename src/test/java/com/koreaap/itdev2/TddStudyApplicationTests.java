@@ -14,12 +14,13 @@ class TddStudyApplicationTests {
   @Test
   public void testMultiplication() {
     Dollar five = new Dollar(5);
-    five.times(2);
-    assertEquals(10, five.amount);
+    Dollar product = five.times(2);
+    assertEquals(10, product.amount);
+    product = five.times(3);
+    assertEquals(15, product.amount);
   }
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: change amount to private
-  // TODO: Fix Dollar class side effect
   // TODO: Fix Money round-up error
 }
