@@ -1,6 +1,6 @@
 package com.koreaap.itdev2;
 
-public class Dollar {
+public class Dollar extends Money {
 
   private int amount;
 
