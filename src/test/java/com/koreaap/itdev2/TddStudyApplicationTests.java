@@ -30,4 +30,6 @@ class TddStudyApplicationTests {
   // TODO: change amount to private
   // TODO: Fix Money round-up error
   // TODO: hashCode()
+  // TODO: Equals null
+  // TODO: Equals object
 }
