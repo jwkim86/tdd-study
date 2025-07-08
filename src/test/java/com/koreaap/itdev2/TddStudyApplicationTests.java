@@ -1,6 +1,7 @@
 package com.koreaap.itdev2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +19,11 @@ class TddStudyApplicationTests {
     assertEquals(10, product.amount);
     product = five.times(3);
     assertEquals(15, product.amount);
+  }
+
+  @Test
+  public void testEquality() {
+    assertTrue(new Dollar(5).equals(new Dollar(5)));
   }
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
