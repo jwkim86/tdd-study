@@ -1,6 +1,6 @@
 package com.koreaap.itdev2;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +20,16 @@ class TddStudyApplicationTests {
     assertEquals(15, product.amount);
   }
 
+  @Test
+  public void testEquality() {
+    assertTrue(new Dollar(5).equals(new Dollar(5)));
+    assertFalse(new Dollar(5).equals(new Dollar(6)));
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: change amount to private
   // TODO: Fix Money round-up error
+  // TODO: hashCode()
+  // TODO: Equals null
+  // TODO: Equals object
 }
