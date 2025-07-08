@@ -22,6 +22,5 @@ class TddStudyApplicationTests {
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: change amount to private
-  // TODO: Fix Dollar class side effect
   // TODO: Fix Money round-up error
 }
