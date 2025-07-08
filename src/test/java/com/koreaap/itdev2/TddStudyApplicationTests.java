@@ -24,4 +24,5 @@ class TddStudyApplicationTests {
   // TODO: change amount to private
   // TODO: Fix Money round-up error
   // TODO: equals()
+  // TODO: hashCode()
 }
