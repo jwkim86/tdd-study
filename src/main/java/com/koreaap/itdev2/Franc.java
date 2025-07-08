@@ -1,8 +1,6 @@
 package com.koreaap.itdev2;
 
-public class Franc extends Money{
-
-  private int amount;
+public class Franc extends Money {
 
   Franc(int amount) {
     this.amount = amount;
