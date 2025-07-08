@@ -14,10 +14,8 @@ class TddStudyApplicationTests {
   @Test
   public void testMultiplication() {
     Dollar five = new Dollar(5);
-    Dollar product = five.times(2);
-    assertEquals(10, product.amount);
-    product = five.times(3);
-    assertEquals(15, product.amount);
+    assertEquals(new Dollar(10), five.times(2));
+    assertEquals(new Dollar(15), five.times(3));
   }
 
   @Test
@@ -27,7 +25,6 @@ class TddStudyApplicationTests {
   }
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
-  // TODO: change amount to private
   // TODO: Fix Money round-up error
   // TODO: hashCode()
   // TODO: Equals null
