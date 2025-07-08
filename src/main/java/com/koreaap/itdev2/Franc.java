@@ -1,8 +1,6 @@
 package com.koreaap.itdev2;
 
-public class Franc {
-
-  private int amount;
+public class Franc extends Money {
 
   Franc(int amount) {
     this.amount = amount;
@@ -10,11 +8,5 @@ public class Franc {
 
   Franc times(int multiplier) {
     return new Franc(amount * multiplier);
-  }
-
-  @Override
-  public boolean equals(Object object) {
-    Franc dollar = (Franc) object;
-    return amount == dollar.amount;
   }
 }

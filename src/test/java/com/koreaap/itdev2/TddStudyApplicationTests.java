@@ -22,6 +22,8 @@ class TddStudyApplicationTests {
   public void testEquality() {
     assertTrue(new Dollar(5).equals(new Dollar(5)));
     assertFalse(new Dollar(5).equals(new Dollar(6)));
+    assertTrue(new Franc(5).equals(new Franc(5)));
+    assertFalse(new Franc(5).equals(new Franc(6)));
   }
 
   @Test
@@ -37,6 +39,6 @@ class TddStudyApplicationTests {
   // TODO: Equals null
   // TODO: Equals object
   // TODO: Dollar/Franc 중복
-  // TODO: 공용 equals
   // TODO: 공용 times
+  // TODO: Franc과 Dollar 비교하기
 }
