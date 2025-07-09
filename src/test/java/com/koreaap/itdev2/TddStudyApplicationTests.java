@@ -41,5 +41,4 @@ class TddStudyApplicationTests {
   // TODO: Equals object
   // TODO: Dollar/Franc 중복
   // TODO: 공용 times
-  // TODO: Franc과 Dollar 비교하기
 }
