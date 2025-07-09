@@ -34,6 +34,12 @@ class TddStudyApplicationTests {
     assertEquals(Money.franc(15), five.times(3));
   }
 
+  @Test
+  public void testCurrency() {
+    assertEquals("USD", Money.dollar(1).currency());
+    assertEquals("CHF", Money.franc(1).currency());
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: Fix Money round-up error
   // TODO: hashCode()
