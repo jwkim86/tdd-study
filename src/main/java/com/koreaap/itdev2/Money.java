@@ -3,6 +3,7 @@ package com.koreaap.itdev2;
 public abstract class Money {
 
   protected int amount;
+  protected String currency;
 
   @Override
   public boolean equals(Object object) {
@@ -19,4 +20,8 @@ public abstract class Money {
   }
 
   abstract Money times(int multiplier);
+
+  String currency() {
+    return currency;
+  }
 }
