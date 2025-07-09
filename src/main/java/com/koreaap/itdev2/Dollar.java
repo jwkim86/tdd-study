@@ -3,8 +3,7 @@ package com.koreaap.itdev2;
 public class Dollar extends Money {
 
   Dollar(int amount, String currency) {
-    this.amount = amount;
-    this.currency = currency;
+    super(amount, currency);
   }
 
   Money times(int multiplier) {
