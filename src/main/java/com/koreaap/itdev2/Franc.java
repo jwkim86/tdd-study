@@ -2,9 +2,9 @@ package com.koreaap.itdev2;
 
 public class Franc extends Money {
 
-  Franc(int amount) {
+  Franc(int amount, String currency) {
     this.amount = amount;
-    currency = "CHF";
+    this.currency = "CHF";
   }
 
   Money times(int multiplier) {

@@ -2,9 +2,9 @@ package com.koreaap.itdev2;
 
 public class Dollar extends Money {
 
-  Dollar(int amount) {
+  Dollar(int amount, String currency) {
     this.amount = amount;
-    currency = "USD";
+    this.currency = "USD";
   }
 
   Money times(int multiplier) {
