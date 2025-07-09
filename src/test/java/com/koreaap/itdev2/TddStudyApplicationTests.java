@@ -47,6 +47,5 @@ class TddStudyApplicationTests {
   // TODO: Equals object
   // TODO: Dollar/Franc 중복
   // TODO: 공용 times
-  // TODO: 통화?
   // TODO: testFrancMultiplication을 지워야 할까?
 }
