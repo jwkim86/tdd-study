@@ -6,8 +6,8 @@ public abstract class Money {
   protected String currency;
 
   Money(int amount, String currency) {
-      this.amount = amount;
-      this.currency = currency;
+    this.amount = amount;
+    this.currency = currency;
   }
 
   @Override
