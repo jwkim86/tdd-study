@@ -40,12 +40,16 @@ class TddStudyApplicationTests {
     assertEquals("CHF", Money.franc(1).currency());
   }
 
+  @Test
+  public void testDifferentClassEquality() {
+    assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: Fix Money round-up error
   // TODO: hashCode()
   // TODO: Equals null
   // TODO: Equals object
   // TODO: Dollar/Franc 중복
-  // TODO: 공용 times
   // TODO: testFrancMultiplication을 지워야 할까?
 }
