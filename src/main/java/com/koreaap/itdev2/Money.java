@@ -1,6 +1,6 @@
 package com.koreaap.itdev2;
 
-public abstract class Money {
+public class Money {
 
   protected int amount;
   protected String currency;
@@ -24,7 +24,9 @@ public abstract class Money {
     return new Franc(amount, "CHF");
   }
 
-  abstract Money times(int multiplier);
+  Money times(int multiplier) {
+    return null;
+  }
 
   String currency() {
     return currency;
