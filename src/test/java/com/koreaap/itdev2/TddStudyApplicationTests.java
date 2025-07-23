@@ -37,7 +37,7 @@ class TddStudyApplicationTests {
     Expression sum = five.plus(five);
     Bank bank = new Bank();
     // Why not like that Money reduce = sum.reduce(bank, "usd")?
-    Money reduced = bank.reduce(sum, "usd");
+    Money reduced = bank.reduce(sum, "USD");
     assertEquals(Money.dollar(10), reduced);
   }
 
