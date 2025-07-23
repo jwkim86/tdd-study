@@ -35,6 +35,8 @@ class TddStudyApplicationTests {
   public void testSimpleAddition() {
     Money sum = Money.dollar(5).plus(Money.dollar(5));
     assertEquals(Money.dollar(10), sum);
+
+    assertEquals(Money.dollar(10), reduced);
   }
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
