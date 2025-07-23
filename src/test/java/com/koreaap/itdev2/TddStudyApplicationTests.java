@@ -43,6 +43,5 @@ class TddStudyApplicationTests {
   // TODO: hashCode()
   // TODO: Equals null
   // TODO: Equals object
-  // TODO: Dollar/Franc 중복
   // TODO: testFrancMultiplication을 지워야 할까?
 }
