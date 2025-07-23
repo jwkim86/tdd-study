@@ -58,6 +58,13 @@ class TddStudyApplicationTests {
     assertEquals(Money.dollar(7), result);
   }
 
+  @Test
+  public void testReduceMoney() {
+    Bank bank = new Bank();
+    Money result = bank.reduce(Money.dollar(1), "USD");
+    assertEquals(Money.dollar(1), result);
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: $5 + $5 = $10
   // TODO: $5 + $5에서 Money 반환하기
