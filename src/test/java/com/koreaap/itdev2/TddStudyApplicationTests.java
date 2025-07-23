@@ -41,6 +41,15 @@ class TddStudyApplicationTests {
     assertEquals(Money.dollar(10), reduced);
   }
 
+  @Test
+  public void testPlusReturnSum() {
+    Money five = Money.dollar(5);
+    Expression result = five.plus(five);
+    Sum sum = (Sum) result;
+    assertEquals(five, sum.augend);
+    assertEquals(five, sum.addend);
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: $5 + $5 = $10
   // TODO: Fix Money round-up error
