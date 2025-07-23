@@ -72,8 +72,10 @@ tasks.jacocoTestCoverageVerification {
     )
 }
 
-tasks.build {
-    dependsOn(tasks.test)
+tasks.register("testAndBuild") {
+    dependsOn("test", "build")
+    group = "build"
+    description = "테스트 후 빌드를 수행합니다."
 }
 
 spotless {
