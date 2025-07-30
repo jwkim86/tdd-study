@@ -75,7 +75,7 @@ class TddStudyApplicationTests {
 
   @Test
   public void testArrayEquals() {
-    assertEquals(new Object[] {"abc"}, new Object[] {"abc"});
+    assertArrayEquals(new Object[] {"abc"}, new Object[] {"abc"});
   }
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
