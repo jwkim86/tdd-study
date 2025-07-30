@@ -85,12 +85,28 @@ class TddStudyApplicationTests {
 
   @Test
   public void testMixedAddition() {
-    Expression fiveFucks = Money.dollar(5);
+    Expression fiveBucks = Money.dollar(5);
     Expression tenFrancs = Money.franc(10);
     Bank bank = new Bank();
     bank.addRate("CHF", "USD", 2);
-    Money result = bank.reduce(fiveFucks.plus(tenFrancs), "USD");
+    Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
     assertEquals(Money.dollar(10), result);
+  }
+
+  @Test
+  public void testSumPlusMoney() {
+    // Given
+    Expression fiveBucks = Money.dollar(5);
+    Expression tenFrans = Money.franc(10);
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+
+    // When
+    Expression sum = new Sum(fiveBucks, tenFrans).plus(fiveBucks);
+    Money result = bank.reduce(sum, "USD");
+
+    // Then
+    assertEquals(Money.dollar(15), result);
   }
 
   // TODO: $5 + $5에서 Money 반환하기
