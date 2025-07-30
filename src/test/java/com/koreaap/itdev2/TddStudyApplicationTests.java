@@ -73,6 +73,11 @@ class TddStudyApplicationTests {
     assertEquals(Money.dollar(1), result);
   }
 
+  @Test
+  public void testArrayEquals() {
+    assertEquals(new Object[] {"abc"}, new Object[] {"abc"});
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: $5 + $5 = $10
   // TODO: $5 + $5에서 Money 반환하기
