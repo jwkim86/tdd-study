@@ -84,13 +84,5 @@ class TddStudyApplicationTests {
   }
 
   // TODO: $5 + 10CHF = $10. fx rate 2:1
-  // TODO: $5 + $5 = $10
   // TODO: $5 + $5에서 Money 반환하기
-  // TODO: Money에 대한 통화 변환을 수행하는 Reduce
-  // TODO: Reduce(Bank, String)
-  // TODO: Fix Money round-up error
-  // TODO: hashCode()
-  // TODO: Equals null
-  // TODO: Equals object
-  // TODO: testFrancMultiplication을 지워야 할까?
 }
