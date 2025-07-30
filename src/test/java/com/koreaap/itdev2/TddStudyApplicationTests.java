@@ -110,6 +110,5 @@ class TddStudyApplicationTests {
   }
 
   // TODO: $5 + $5에서 Money 반환하기
-  // TODO: Sum.plus()
   // TODO: Expression.times()
 }
