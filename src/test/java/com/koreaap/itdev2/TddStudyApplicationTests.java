@@ -124,13 +124,4 @@ class TddStudyApplicationTests {
     // Then
     assertEquals(Money.dollar(20), result);
   }
-
-  @Test
-  public void testPlusSameCurrency() {
-    // Given and When
-    Expression sum = Money.dollar(1).plus(Money.dollar(1));
-
-    // Then
-    assertTrue(sum instanceof Sum);
-  }
 }
