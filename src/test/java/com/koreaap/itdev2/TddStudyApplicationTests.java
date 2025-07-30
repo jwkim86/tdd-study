@@ -93,6 +93,7 @@ class TddStudyApplicationTests {
     assertEquals(Money.dollar(10), result);
   }
 
-  // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: $5 + $5에서 Money 반환하기
+  // TODO: Sum.plus()
+  // TODO: Expression.times()
 }
