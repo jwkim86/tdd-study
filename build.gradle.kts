@@ -51,6 +51,13 @@ tasks.jacocoTestReport {
     }
 }
 
+tasks.pitest {
+    doLast {
+        val reportPath = "${layout.buildDirectory.get().asFile.absolutePath.replace("\\", "/")}/reports/pitest/index.html"
+        println("결함 삽입 테스트 리포트: file:///$reportPath")
+    }
+}
+
 tasks.jacocoTestCoverageVerification {
     dependsOn(tasks.test, tasks.jacocoTestReport)
     violationRules {

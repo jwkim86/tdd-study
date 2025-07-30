@@ -21,7 +21,7 @@
 | 전체 빌드 및 테스트 | `./gradlew testAndBuild`  | 전체 빌드, 테스트, 커버리지 검증까지 수행           |
 | 테스트만 실행     | `./gradlew test`          | 단위 테스트 실행 및 커버리지 리포트 생성            |
 | 코드 포맷팅 체크   | `./gradlew spotlessCheck` | 코드 스타일 검사                          |
-| 결함 삽입 테스트   | `./gradlew pitest -Doverride.pitest.reportDir=build/pitReport`                         | 코드를 변화시켜 테스트가 실패하도록 유도하여 테스트 결함 발견 |
+| 결함 삽입 테스트   | `./gradlew pitest`                         | 코드를 변화시켜 테스트가 실패하도록 유도하여 테스트 결함 발견 |
 
 ### 전체 빌드 및 테스트 순서
 `build` 명령어 실행 시 아래 순서로 작업이 자동 수행됩니다.
