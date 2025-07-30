@@ -85,8 +85,8 @@ class TddStudyApplicationTests {
 
   @Test
   public void testMixedAddition() {
-    Money fiveFucks = Money.dollar(5);
-    Money tenFrancs = Money.franc(10);
+    Expression fiveFucks = Money.dollar(5);
+    Expression tenFrancs = Money.franc(10);
     Bank bank = new Bank();
     bank.addRate("CHF", "USD", 2);
     Money result = bank.reduce(fiveFucks.plus(tenFrancs), "USD");
