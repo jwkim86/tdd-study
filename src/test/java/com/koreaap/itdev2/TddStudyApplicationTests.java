@@ -83,6 +83,16 @@ class TddStudyApplicationTests {
     assertEquals(1, new Bank().rate("USD", "USD"));
   }
 
+  @Test
+  public void testMixedAddition() {
+    Expression fiveFucks = Money.dollar(5);
+    Expression tenFrancs = Money.franc(10);
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    Money result = bank.reduce(fiveFucks.plus(tenFrancs), "USD");
+    assertEquals(Money.dollar(10), result);
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: $5 + $5에서 Money 반환하기
 }
