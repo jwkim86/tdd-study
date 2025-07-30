@@ -78,6 +78,11 @@ class TddStudyApplicationTests {
     assertArrayEquals(new Object[] {"abc"}, new Object[] {"abc"});
   }
 
+  @Test
+  public void testIdentityRate() {
+    assertEquals(1, new Bank().rate("USD", "USD"));
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
   // TODO: $5 + $5 = $10
   // TODO: $5 + $5에서 Money 반환하기
