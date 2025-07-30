@@ -133,6 +133,4 @@ class TddStudyApplicationTests {
     // Then
     assertTrue(sum instanceof Sum);
   }
-
-  // TODO: $5 + $5에서 Money 반환하기
 }
