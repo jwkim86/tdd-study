@@ -1,6 +1,6 @@
 package com.koreaap.itdev2;
 
-public class Sum implements Expression {
+public class Sum extends Expression {
   public Sum(Expression augend, Expression addend) {
     this.augend = augend;
     this.addend = addend;
@@ -12,11 +12,6 @@ public class Sum implements Expression {
   public Money reduce(Bank bank, String to) {
     int amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount;
     return new Money(amount, to);
-  }
-
-  @Override
-  public Expression plus(Expression tenFrancs) {
-    return new Sum(this, addend);
   }
 
   public Expression times(int multiplier) {

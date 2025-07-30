@@ -1,6 +1,6 @@
 package com.koreaap.itdev2;
 
-public class Money implements Expression {
+public class Money extends Expression {
 
   protected int amount;
   protected String currency;
@@ -34,10 +34,6 @@ public class Money implements Expression {
 
   public String toString() {
     return amount + " " + currency;
-  }
-
-  public Expression plus(Expression addend) {
-    return new Sum(this, addend);
   }
 
   public Money reduce(Bank bank, String to) {

@@ -1,9 +1,11 @@
 package com.koreaap.itdev2;
 
-public interface Expression {
-  Money reduce(Bank bank, String to);
+public abstract class Expression {
+  public abstract Money reduce(Bank bank, String to);
 
-  Expression plus(Expression tenFrancs);
+  public Expression plus(Expression addend) {
+    return new Sum(this, addend);
+  }
 
-  Expression times(int multiplier);
+  public abstract Expression times(int multiplier);
 }
