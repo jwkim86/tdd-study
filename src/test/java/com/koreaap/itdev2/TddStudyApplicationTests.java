@@ -65,12 +65,24 @@ class TddStudyApplicationTests {
     assertEquals(Money.dollar(1), result);
   }
 
+  @Test
+  public void testReduceMoneyDifferentCurrency() {
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    Money result = bank.reduce(Money.franc(2), "USD");
+    assertEquals(Money.dollar(1), result);
+  }
+
+  @Test
+  public void testArrayEquals() {
+    assertArrayEquals(new Object[] {"abc"}, new Object[] {"abc"});
+  }
+
+  @Test
+  public void testIdentityRate() {
+    assertEquals(1, new Bank().rate("USD", "USD"));
+  }
+
   // TODO: $5 + 10CHF = $10. fx rate 2:1
-  // TODO: $5 + $5 = $10
   // TODO: $5 + $5에서 Money 반환하기
-  // TODO: Fix Money round-up error
-  // TODO: hashCode()
-  // TODO: Equals null
-  // TODO: Equals object
-  // TODO: testFrancMultiplication을 지워야 할까?
 }
