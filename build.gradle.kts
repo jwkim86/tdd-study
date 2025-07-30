@@ -3,6 +3,8 @@ plugins {
     id("org.springframework.boot") version "3.5.3"
     id("io.spring.dependency-management") version "1.1.7"
     id("com.diffplug.spotless") version "6.25.0"
+    // https://gradle-pitest-plugin.solidsoft.info/
+    id("info.solidsoft.pitest") version "1.19.0-rc.1"
     id("jacoco")
 }
 
@@ -49,6 +51,13 @@ tasks.jacocoTestReport {
     }
 }
 
+tasks.pitest {
+    doLast {
+        val reportPath = "${layout.buildDirectory.get().asFile.absolutePath.replace("\\", "/")}/reports/pitest/index.html"
+        println("결함 삽입 테스트 리포트: file:///$reportPath")
+    }
+}
+
 tasks.jacocoTestCoverageVerification {
     dependsOn(tasks.test, tasks.jacocoTestReport)
     violationRules {
@@ -87,4 +96,13 @@ spotless {
         ktlint()
         target("*.kts")
     }
+}
+
+pitest {
+    junit5PluginVersion.set("1.2.1")
+    targetClasses.set(listOf("com.koreaap.*")) // mutation test 대상 패키지
+    targetTests.set(listOf("com.koreaap.*"))
+    threads.set(4)
+    outputFormats.set(listOf("HTML"))
+    timestampedReports.set(false)
 }
