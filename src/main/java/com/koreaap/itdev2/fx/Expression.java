@@ -1,4 +1,4 @@
-package com.koreaap.itdev2;
+package com.koreaap.itdev2.fx;
 
 public abstract class Expression {
   public abstract Money reduce(Bank bank, String to);

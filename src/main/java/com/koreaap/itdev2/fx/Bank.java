@@ -1,4 +1,4 @@
-package com.koreaap.itdev2;
+package com.koreaap.itdev2.fx;
 
 import java.util.Hashtable;
 
