@@ -1,4 +1,4 @@
-package com.koreaap.itdev2;
+package com.koreaap.itdev2.fx;
 
 public class Sum extends Expression {
   public Sum(Expression augend, Expression addend) {
