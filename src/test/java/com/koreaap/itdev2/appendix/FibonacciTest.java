@@ -2,15 +2,14 @@ package com.koreaap.itdev2.appendix;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class FibonacciTest {
 
-  @Test
-  void shouldBeItIsFibonacci() {
-    int cases[][] = {{0, 0}, {1, 1}};
-    for (int[] c : cases) {
-      assertEquals(c[1], Fibonacci.fib(c[0]));
-    }
+  @ParameterizedTest
+  @CsvSource({"0,0", "1,1"})
+  void shouldBeFibonacci(int input, int expected) {
+    assertEquals(expected, Fibonacci.fib(input));
   }
 }
