@@ -7,12 +7,10 @@ import org.junit.jupiter.api.Test;
 class FibonacciTest {
 
   @Test
-  void shouldReturnZeroWhenInputIsZero() {
-    assertEquals(0, Fibonacci.fib(0));
-  }
-
-  @Test
-  void shouldReturn1WhenInputIs1() {
-    assertEquals(1, Fibonacci.fib(1));
+  void shouldBeItIsFibonacci() {
+    int cases[][] = {{0, 0}, {1, 1}};
+    for (int[] c : cases) {
+      assertEquals(c[1], Fibonacci.fib(c[0]));
+    }
   }
 }
