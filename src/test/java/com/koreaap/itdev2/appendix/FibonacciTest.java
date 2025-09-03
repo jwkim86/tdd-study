@@ -10,4 +10,9 @@ class FibonacciTest {
   void shouldReturnZeroWhenInputIsZero() {
     assertEquals(0, Fibonacci.fib(0));
   }
+
+  @Test
+  void shouldReturn1WhenInputIs1() {
+    assertEquals(1, Fibonacci.fib(1));
+  }
 }
